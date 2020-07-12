@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 64946100408278362}
   - component: {fileID: -6290979947040322889}
   - component: {fileID: 1460571266764258667}
+  - component: {fileID: 7201190803106588882}
   m_Layer: 10
   m_Name: Asteroid_B
   m_TagString: AstroidB
@@ -137,3 +138,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2585e9fccbcaa264b8d88ad59ed11dec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  particalEffect: {fileID: 1683406618584738, guid: 30e257be341f5ee47a9b118bef1bf42e,
+    type: 3}
+  playerDeathParticalEffect: {fileID: 1955512690031088, guid: 96768878893f2b44f8c052738893153d,
+    type: 3}
+--- !u!114 &7201190803106588882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1669921439223048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2839936a018fca447a36b07876c83cf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tumble: 45

@@ -18,6 +18,7 @@ public class Bullet : MonoBehaviour
 
     public float    bulletSpeed = 20;
     public float    lifeTime = 2;
+    public GameObject particleEffectPrefab;
 
     void Start()
     {
@@ -28,6 +29,10 @@ public class Bullet : MonoBehaviour
 
         // Set the velocity of the Bullet
         GetComponent<Rigidbody>().velocity = transform.forward * bulletSpeed;
+
+        GameObject pe = Instantiate<GameObject>(particleEffectPrefab);
+        pe.transform.SetParent(transform);
+        pe.transform.localPosition = Vector3.zero;
     }
 
     void DestroyMe()

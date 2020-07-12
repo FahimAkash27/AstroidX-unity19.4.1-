@@ -7,6 +7,9 @@ public class Astroid : MonoBehaviour
     // Start is called before the first frame update
 
     Rigidbody rigid;
+    public GameObject particalEffect;
+    public GameObject playerDeathParticalEffect;
+
     void Start()
     {
         
@@ -27,6 +30,7 @@ public class Astroid : MonoBehaviour
             if (gameObject.tag == "AstroidA")
             {
                 Vector3 destroyAstroidPos = gameObject.transform.position;
+                Instantiate(particalEffect, gameObject.transform.position, gameObject.transform.rotation);
                 Destroy(gameObject);
                 AstroidGenerator.AG.CreatingAstroidAfterDestroyingAstroidA(destroyAstroidPos);
                 AstroidGenerator.AG.score = AstroidGenerator.AG.score + 500;
@@ -36,6 +40,7 @@ public class Astroid : MonoBehaviour
             else if(gameObject.tag == "AstroidB")
             {
                 Vector3 destroyAstroidPos = gameObject.transform.position;
+                Instantiate(particalEffect, gameObject.transform.position, gameObject.transform.rotation);
                 Destroy(gameObject);
                 AstroidGenerator.AG.CreatingAstroidAfterDestroingAstroidB(destroyAstroidPos);
                 AstroidGenerator.AG.score = AstroidGenerator.AG.score + 300;
@@ -45,10 +50,12 @@ public class Astroid : MonoBehaviour
             {
                 AstroidGenerator.AG.score = AstroidGenerator.AG.score + 100;
                 CanvasScript.CS.SetScore(AstroidGenerator.AG.score);
+                Instantiate(particalEffect, gameObject.transform.position, gameObject.transform.rotation);
                 Destroy(gameObject);
             }
         }else if(other.tag == "Player")
         {
+            Instantiate(playerDeathParticalEffect, other.gameObject.transform.position, other.gameObject.transform.rotation);
             other.gameObject.SetActive(false);
             CanvasScript.CS.restartPanel.SetActive(true);
         }

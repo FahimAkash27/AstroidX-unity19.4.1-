@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{9C58AB3D-560D-B9B7-D948-4DCEA4D7CB7F}</ProjectGuid>
+    <ProjectGuid>{8F429157-C707-2412-AACF-520AA36B246F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -63,15 +63,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\AstroidGenerator.cs" />
-    <Compile Include="Assets\CanvasScript.cs" />
     <Compile Include="Assets\__Scripts\AsteraX.cs" />
     <Compile Include="Assets\__Scripts\Astroid.cs" />
+    <Compile Include="Assets\__Scripts\AstroidGenerator.cs" />
     <Compile Include="Assets\__Scripts\Bullet.cs" />
-    <Compile Include="Assets\__Scripts\OffScreenWrapper.cs" />
+    <Compile Include="Assets\__Scripts\CanvasScript.cs" />
+    <Compile Include="Assets\__Scripts\OnlyEmitParticlesInBounds.cs" />
     <Compile Include="Assets\__Scripts\PlayerShip.cs" />
+    <Compile Include="Assets\__Scripts\PositionRelativeToAnotherGameObject.cs" />
+    <Compile Include="Assets\__Scripts\RandomRotator.cs" />
     <Compile Include="Assets\__Scripts\ScaleSpriteToFillOrthographicCamera.cs" />
-    <Compile Include="Assets\__Scripts\ScreenBounds.cs" />
     <Compile Include="Assets\__Scripts\ScreenWrapper_My.cs" />
     <Compile Include="Assets\__Scripts\TiltWithVelocity.cs" />
     <Compile Include="Assets\__Scripts\TurretPointAtMouse.cs" />
@@ -260,13 +261,13 @@
       <HintPath>U:/AUnity19.4/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
-      <HintPath>U:/AA_Coursera_Course/Week3/Week3Challange/AsteraX_UCP_C1_Challenge03_Start/Library/PackageCache/com.unity.analytics@3.3.5/Unity.Analytics.Editor.dll</HintPath>
+      <HintPath>U:/AA_Coursera_Course/Week3/Week3Challange/AstroidX-unity19.4.1-/AstroidX(Unity19.4.1_LTS)/Library/PackageCache/com.unity.analytics@3.3.5/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>U:/AA_Coursera_Course/Week3/Week3Challange/AsteraX_UCP_C1_Challenge03_Start/Library/PackageCache/com.unity.analytics@3.3.5/Unity.Analytics.Tracker.dll</HintPath>
+      <HintPath>U:/AA_Coursera_Course/Week3/Week3Challange/AstroidX-unity19.4.1-/AstroidX(Unity19.4.1_LTS)/Library/PackageCache/com.unity.analytics@3.3.5/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>U:/AA_Coursera_Course/Week3/Week3Challange/AsteraX_UCP_C1_Challenge03_Start/Library/PackageCache/com.unity.analytics@3.3.5/AnalyticsStandardEvents/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>U:/AA_Coursera_Course/Week3/Week3Challange/AstroidX-unity19.4.1-/AstroidX(Unity19.4.1_LTS)/Library/PackageCache/com.unity.analytics@3.3.5/AnalyticsStandardEvents/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>U:/AUnity19.4/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
@@ -623,72 +624,72 @@
       <HintPath>U:/AUnity19.4/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unityscript/Boo.Lang.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>U:/AA_Coursera_Course/Week3/Week3Challange/AsteraX_UCP_C1_Challenge03_Start/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>U:/AA_Coursera_Course/Week3/Week3Challange/AstroidX-unity19.4.1-/AstroidX(Unity19.4.1_LTS)/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Monetization">
-      <HintPath>U:/AA_Coursera_Course/Week3/Week3Challange/AsteraX_UCP_C1_Challenge03_Start/Library/ScriptAssemblies/UnityEngine.Monetization.dll</HintPath>
+      <HintPath>U:/AA_Coursera_Course/Week3/Week3Challange/AstroidX-unity19.4.1-/AstroidX(Unity19.4.1_LTS)/Library/ScriptAssemblies/UnityEngine.Monetization.dll</HintPath>
     </Reference>
     <Reference Include="com.unity.multiplayer-hlapi.Editor">
-      <HintPath>U:/AA_Coursera_Course/Week3/Week3Challange/AsteraX_UCP_C1_Challenge03_Start/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Editor.dll</HintPath>
+      <HintPath>U:/AA_Coursera_Course/Week3/Week3Challange/AstroidX-unity19.4.1-/AstroidX(Unity19.4.1_LTS)/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>U:/AA_Coursera_Course/Week3/Week3Challange/AsteraX_UCP_C1_Challenge03_Start/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>U:/AA_Coursera_Course/Week3/Week3Challange/AstroidX-unity19.4.1-/AstroidX(Unity19.4.1_LTS)/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Advertisements">
-      <HintPath>U:/AA_Coursera_Course/Week3/Week3Challange/AsteraX_UCP_C1_Challenge03_Start/Library/ScriptAssemblies/UnityEngine.Advertisements.dll</HintPath>
+      <HintPath>U:/AA_Coursera_Course/Week3/Week3Challange/AstroidX-unity19.4.1-/AstroidX(Unity19.4.1_LTS)/Library/ScriptAssemblies/UnityEngine.Advertisements.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>U:/AA_Coursera_Course/Week3/Week3Challange/AsteraX_UCP_C1_Challenge03_Start/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>U:/AA_Coursera_Course/Week3/Week3Challange/AstroidX-unity19.4.1-/AstroidX(Unity19.4.1_LTS)/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>U:/AA_Coursera_Course/Week3/Week3Challange/AsteraX_UCP_C1_Challenge03_Start/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>U:/AA_Coursera_Course/Week3/Week3Challange/AstroidX-unity19.4.1-/AstroidX(Unity19.4.1_LTS)/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>U:/AA_Coursera_Course/Week3/Week3Challange/AsteraX_UCP_C1_Challenge03_Start/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>U:/AA_Coursera_Course/Week3/Week3Challange/AstroidX-unity19.4.1-/AstroidX(Unity19.4.1_LTS)/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>U:/AA_Coursera_Course/Week3/Week3Challange/AsteraX_UCP_C1_Challenge03_Start/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>U:/AA_Coursera_Course/Week3/Week3Challange/AstroidX-unity19.4.1-/AstroidX(Unity19.4.1_LTS)/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="com.unity.multiplayer-weaver.Editor">
-      <HintPath>U:/AA_Coursera_Course/Week3/Week3Challange/AsteraX_UCP_C1_Challenge03_Start/Library/ScriptAssemblies/com.unity.multiplayer-weaver.Editor.dll</HintPath>
+      <HintPath>U:/AA_Coursera_Course/Week3/Week3Challange/AstroidX-unity19.4.1-/AstroidX(Unity19.4.1_LTS)/Library/ScriptAssemblies/com.unity.multiplayer-weaver.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.XR.LegacyInputHelpers">
-      <HintPath>U:/AA_Coursera_Course/Week3/Week3Challange/AsteraX_UCP_C1_Challenge03_Start/Library/ScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
+      <HintPath>U:/AA_Coursera_Course/Week3/Week3Challange/AstroidX-unity19.4.1-/AstroidX(Unity19.4.1_LTS)/Library/ScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>U:/AA_Coursera_Course/Week3/Week3Challange/AsteraX_UCP_C1_Challenge03_Start/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>U:/AA_Coursera_Course/Week3/Week3Challange/AstroidX-unity19.4.1-/AstroidX(Unity19.4.1_LTS)/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Sprite.Editor">
-      <HintPath>U:/AA_Coursera_Course/Week3/Week3Challange/AsteraX_UCP_C1_Challenge03_Start/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+      <HintPath>U:/AA_Coursera_Course/Week3/Week3Challange/AstroidX-unity19.4.1-/AstroidX(Unity19.4.1_LTS)/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Tilemap.Editor">
-      <HintPath>U:/AA_Coursera_Course/Week3/Week3Challange/AsteraX_UCP_C1_Challenge03_Start/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+      <HintPath>U:/AA_Coursera_Course/Week3/Week3Challange/AstroidX-unity19.4.1-/AstroidX(Unity19.4.1_LTS)/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.SpatialTracking">
-      <HintPath>U:/AA_Coursera_Course/Week3/Week3Challange/AsteraX_UCP_C1_Challenge03_Start/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
+      <HintPath>U:/AA_Coursera_Course/Week3/Week3Challange/AstroidX-unity19.4.1-/AstroidX(Unity19.4.1_LTS)/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.SpatialTracking">
-      <HintPath>U:/AA_Coursera_Course/Week3/Week3Challange/AsteraX_UCP_C1_Challenge03_Start/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
+      <HintPath>U:/AA_Coursera_Course/Week3/Week3Challange/AstroidX-unity19.4.1-/AstroidX(Unity19.4.1_LTS)/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>U:/AA_Coursera_Course/Week3/Week3Challange/AsteraX_UCP_C1_Challenge03_Start/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>U:/AA_Coursera_Course/Week3/Week3Challange/AstroidX-unity19.4.1-/AstroidX(Unity19.4.1_LTS)/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>U:/AA_Coursera_Course/Week3/Week3Challange/AsteraX_UCP_C1_Challenge03_Start/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+      <HintPath>U:/AA_Coursera_Course/Week3/Week3Challange/AstroidX-unity19.4.1-/AstroidX(Unity19.4.1_LTS)/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.XR.LegacyInputHelpers">
-      <HintPath>U:/AA_Coursera_Course/Week3/Week3Challange/AsteraX_UCP_C1_Challenge03_Start/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
+      <HintPath>U:/AA_Coursera_Course/Week3/Week3Challange/AstroidX-unity19.4.1-/AstroidX(Unity19.4.1_LTS)/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>U:/AA_Coursera_Course/Week3/Week3Challange/AsteraX_UCP_C1_Challenge03_Start/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>U:/AA_Coursera_Course/Week3/Week3Challange/AstroidX-unity19.4.1-/AstroidX(Unity19.4.1_LTS)/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="com.unity.multiplayer-hlapi.Runtime">
-      <HintPath>U:/AA_Coursera_Course/Week3/Week3Challange/AsteraX_UCP_C1_Challenge03_Start/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Runtime.dll</HintPath>
+      <HintPath>U:/AA_Coursera_Course/Week3/Week3Challange/AstroidX-unity19.4.1-/AstroidX(Unity19.4.1_LTS)/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Runtime.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{331A928D-6E4C-DF88-93B2-7BBAF681AA6D}</Project>
+      <Project>{FB67DBEF-D38D-0E98-B943-3ED14BDB7F40}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
     </ProjectReference>
   </ItemGroup>

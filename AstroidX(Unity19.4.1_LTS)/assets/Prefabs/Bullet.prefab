@@ -126,6 +126,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletSpeed: 20
   lifeTime: 2
+  particleEffectPrefab: {fileID: 1545113898025676, guid: 39e56bd864ac74807af80145e22079df,
+    type: 3}
 --- !u!114 &5982531073150258606
 MonoBehaviour:
   m_ObjectHideFlags: 0
