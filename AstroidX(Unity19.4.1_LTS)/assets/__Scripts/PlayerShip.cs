@@ -30,6 +30,8 @@ public class PlayerShip : MonoBehaviour
 
     Rigidbody           rigid;
 
+    public GameObject playerParticalEffects;
+
 
     void Awake()
     {
@@ -38,7 +40,10 @@ public class PlayerShip : MonoBehaviour
         // NOTE: We don't need to check whether or not rigid is null because of 
         //  [RequireComponent( typeof(Rigidbody) )] above
         rigid = GetComponent<Rigidbody>();
+        
     }
+
+
 
 
     void Update()
@@ -83,5 +88,10 @@ public class PlayerShip : MonoBehaviour
         {
             return S.shipSpeed;
         }
+    }
+
+    public void PlayerStartEffect()
+    {
+        Instantiate(playerParticalEffects, gameObject.transform.position, gameObject.transform.rotation);
     }
 }
