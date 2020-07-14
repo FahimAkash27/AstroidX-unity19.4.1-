@@ -63,8 +63,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\LevelManager.cs" />
-    <Compile Include="Assets\StartMenuCanvasScript.cs" />
+    <Compile Include="Assets\__Scripts\AchivementManager.cs" />
+    <Compile Include="Assets\__Scripts\AchivementPopup.cs" />
     <Compile Include="Assets\__Scripts\AsteraX.cs" />
     <Compile Include="Assets\__Scripts\Astroid.cs" />
     <Compile Include="Assets\__Scripts\AstroidGenerator.cs" />
@@ -72,12 +72,14 @@
     <Compile Include="Assets\__Scripts\CanvasScript.cs" />
     <Compile Include="Assets\__Scripts\FadeIn.cs" />
     <Compile Include="Assets\__Scripts\FadeOut.cs" />
+    <Compile Include="Assets\__Scripts\LevelManager.cs" />
     <Compile Include="Assets\__Scripts\OnlyEmitParticlesInBounds.cs" />
     <Compile Include="Assets\__Scripts\PlayerShip.cs" />
     <Compile Include="Assets\__Scripts\PositionRelativeToAnotherGameObject.cs" />
     <Compile Include="Assets\__Scripts\RandomRotator.cs" />
     <Compile Include="Assets\__Scripts\ScaleSpriteToFillOrthographicCamera.cs" />
     <Compile Include="Assets\__Scripts\ScreenWrapper_My.cs" />
+    <Compile Include="Assets\__Scripts\StartMenuCanvasScript.cs" />
     <Compile Include="Assets\__Scripts\TiltWithVelocity.cs" />
     <Compile Include="Assets\__Scripts\TurretPointAtMouse.cs" />
     <Compile Include="Assets\__Scripts\Vector3Extensions.cs" />

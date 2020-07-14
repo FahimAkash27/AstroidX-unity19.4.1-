@@ -32,6 +32,8 @@ public class PlayerShip : MonoBehaviour
 
     public GameObject playerParticalEffects;
 
+    public int fireShots;
+
 
     void Awake()
     {
@@ -40,6 +42,16 @@ public class PlayerShip : MonoBehaviour
         // NOTE: We don't need to check whether or not rigid is null because of 
         //  [RequireComponent( typeof(Rigidbody) )] above
         rigid = GetComponent<Rigidbody>();
+
+        if (!PlayerPrefs.HasKey("FireShots"))
+        {
+            fireShots = 0;
+            PlayerPrefs.SetInt("FireShots", fireShots);
+        }
+        else
+        {
+            fireShots = PlayerPrefs.GetInt("fireShots");
+        }
         
     }
 
@@ -80,6 +92,10 @@ public class PlayerShip : MonoBehaviour
         GameObject go = Instantiate<GameObject>(bulletPrefab);
         go.transform.position = transform.position;
         go.transform.LookAt(mPos3D);
+        fireShots++;
+
+        if (fireShots == 1000)
+            AchivementManager.AM.TriggerHappy();
     }
 
     static public float MAX_SPEED

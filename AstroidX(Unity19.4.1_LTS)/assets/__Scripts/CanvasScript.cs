@@ -27,6 +27,9 @@ public class CanvasScript : MonoBehaviour
     public GameObject restartPanel;
     public GameObject congratulationPanel;
     public static int finalScore;
+
+    public bool firstKill = false;
+    public bool rookie = false;
     void Start()
     {
         finalScore = 2100;
@@ -43,6 +46,16 @@ public class CanvasScript : MonoBehaviour
 
     public void SetScore(int number)
     {
+        if(firstKill == false && number > 0)
+        {
+            AchivementManager.AM.FirstDustDone();
+            firstKill = true;
+        }
+        if(number >= 5500 && rookie == false)
+        {
+            rookie = true;
+            AchivementManager.AM.RookiePilot();
+        }
         scoreShownInGame.text = number.ToString();
         if (number == ((LevelManager.levelNumber * 1500) + 600))
         {
